@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class PlayerControler : MonoBehaviour
 {
-
     private float speed = 5f;
     private bool isFacingRight = true;
 
