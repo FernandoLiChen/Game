@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Tilemaps;
 using UnityEngine;
 
 public class Shooting : MonoBehaviour
@@ -11,6 +12,10 @@ public class Shooting : MonoBehaviour
     public bool canFire;
     private float timer;
     public float timeBetweenFiring; 
+    
+
+    
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -20,6 +25,7 @@ public class Shooting : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         mousePos = mainCam.ScreenToWorldPoint(Input.mousePosition);
 
         Vector3 rotation = mousePos - transform.position;
@@ -43,5 +49,11 @@ public class Shooting : MonoBehaviour
             canFire = false;
             Instantiate(bullet, bulletTransform.position, Quaternion.identity);
         }
+
+        
     }
+
+  
+
+    
 }

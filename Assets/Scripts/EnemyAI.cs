@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class EnemyAI : MonoBehaviour
 {
-    public float speed = 5f;
-    public float stoppingDistance = 2f;
+    public float speed = 2f;
+    public float stoppingDistance = 4f;
     private Transform player;
 
-    public int health = 1; // Enemy's health points
+    
 
     void Start()
     {
@@ -23,12 +23,5 @@ public class EnemyAI : MonoBehaviour
         }
     }
 
-    public void TakeDamage(int damage)
-    {
-        health -= damage;
-        if(health <= 0)
-        {
-            Destroy(gameObject); // Destroy enemy
-        }
-    }
+    
 }
