@@ -13,35 +13,17 @@ public class PlayerControler : MonoBehaviour
     public Animator animator;
     Vector2 movement;
 
-
-
     void Update()
     {
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
-
         animator.SetFloat("Horizontal", movement.x);
-
         animator.SetFloat("Speed", movement.sqrMagnitude);
-
-        Flip();
     }
 
     void FixedUpdate()
     {
         rb.MovePosition(rb.position + movement * speed * Time.fixedDeltaTime);
-
-    }
-
-    private void Flip()
-    {
-        if (isFacingRight && movement.x < 0f || !isFacingRight && movement.x > 0f)
-        {
-            isFacingRight = !isFacingRight;
-            Vector3 localScale = transform.localScale;
-            localScale.x *= -1f;
-            transform.localScale = localScale;
-        }
     }
 
     public void SetMoveSpeed(float newSpeedAdjustment)
