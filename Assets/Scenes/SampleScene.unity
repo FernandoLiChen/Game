@@ -1782,6 +1782,7 @@ GameObject:
   - component: {fileID: 1341743874}
   - component: {fileID: 1341743879}
   - component: {fileID: 1341743880}
+  - component: {fileID: 1341743881}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Enemy
@@ -1959,6 +1960,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pHealth: {fileID: 1068993465}
+  eHealth: {fileID: 0}
   damage: 20
 --- !u!114 &1341743880
 MonoBehaviour:
@@ -1974,6 +1976,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullet: {fileID: 7232861406048840124, guid: 31ffb99f17fd19b4793c00182d2caa0a, type: 3}
   bulletPos: {fileID: 450396440}
+--- !u!114 &1341743881
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1341743873}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1d48628734cdec4ba29bed9907fbb4b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ehealth: 100
 --- !u!1 &1427157196
 GameObject:
   m_ObjectHideFlags: 0
@@ -2008,7 +2023,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -486.8806, y: 296.3867}
+  m_AnchoredPosition: {x: -379, y: 217}
   m_SizeDelta: {x: 294.6719, y: 37.6272}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1427157198
@@ -6279,7 +6294,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -486.88055, y: 296.38672}
+  m_AnchoredPosition: {x: -379, y: 217}
   m_SizeDelta: {x: 294.6719, y: 37.6272}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1759766938
@@ -6565,7 +6580,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3327527594759112653, guid: 82a3be2bc388f6a47a512af78784eb96, type: 3}
       propertyPath: force
-      value: 3
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 3940145850246177965, guid: 82a3be2bc388f6a47a512af78784eb96, type: 3}
       propertyPath: m_LocalPosition.x

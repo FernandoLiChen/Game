@@ -15,7 +15,8 @@ public class PlayerControler : MonoBehaviour
 
 
 
-    void Update(){
+    void Update()
+    {
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
 
@@ -26,13 +27,16 @@ public class PlayerControler : MonoBehaviour
         Flip();
     }
 
-    void FixedUpdate(){
+    void FixedUpdate()
+    {
         rb.MovePosition(rb.position + movement * speed * Time.fixedDeltaTime);
-        
+
     }
 
-    private void Flip(){
-        if (isFacingRight && movement.x < 0f || !isFacingRight && movement.x >0f){
+    private void Flip()
+    {
+        if (isFacingRight && movement.x < 0f || !isFacingRight && movement.x > 0f)
+        {
             isFacingRight = !isFacingRight;
             Vector3 localScale = transform.localScale;
             localScale.x *= -1f;
@@ -40,5 +44,9 @@ public class PlayerControler : MonoBehaviour
         }
     }
 
+    public void SetMoveSpeed(float newSpeedAdjustment)
+    {
+        speed += newSpeedAdjustment;
+    }
 
 }
