@@ -980,7 +980,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6cc069740444994e8b0fad2f273d94f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Width: 25
+  Width: 29
   Height: 13
   X: 0
   Y: 0
