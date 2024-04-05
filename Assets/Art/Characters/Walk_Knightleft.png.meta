@@ -274,7 +274,14 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Walk_Knightleft_0: -1733518893004765396
+      Walk_Knightleft_1: -861096485267193829
+      Walk_Knightleft_2: -2796219532184123608
+      Walk_Knightleft_3: -2975041226982018066
+      Walk_Knightleft_4: -7751123133185800084
+      Walk_Knightleft_5: 9205630726550863991
+      Walk_Knightleft_6: 1722407329664228325
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

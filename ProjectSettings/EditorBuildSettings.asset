@@ -5,7 +5,14 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/DungeonRooms/DungeonStart.unity
+    guid: 452849b0f46a34c4dbf0ce3f608e693e
+  - enabled: 1
+    path: Assets/Scenes/DungeonRooms/DungeonEmpty.unity
+    guid: 8ea3bb0d8ed5d414a8a6538b4490681e
   m_configObjects: {}
+  m_UseUCBPForAssetBundles: 0
