@@ -8,6 +8,8 @@ public class Room : MonoBehaviour
     public int Height;
     public int X;
     public int Y;
+    public Door leftDoor, rightDoor, topDoor, bottomDoor;
+    public List<Door> doors = new List<Door>();
     // Start is called before the first frame update
     void Start()
     {
@@ -16,6 +18,8 @@ public class Room : MonoBehaviour
             Debug.Log("You pressed play in the wrong scene");
             return;
         }
+
+
 
         RoomController.instance.RegisterRoom(this);
     }
