@@ -6,6 +6,7 @@ public class Damage : MonoBehaviour
 {
     public playerHealth pHealth;
     public EnemyHealth eHealth;
+ 
     public float damage;
     void Start()
     {
@@ -23,9 +24,18 @@ public class Damage : MonoBehaviour
             pHealth.health -= damage;
 
         }
+        if(other.gameObject.CompareTag("Enemy")){
+            eHealth.ehealth -= damage;
 
+        }
+        if(other.gameObject.CompareTag("BOSS")){
+            eHealth.ehealth -= damage;
+
+        }
         
     }
+
+    
 
     
 

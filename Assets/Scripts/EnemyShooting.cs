@@ -25,7 +25,14 @@ public class EnemyShooting : MonoBehaviour
     }
 
     void shoot(){
-        Instantiate(bullet, bulletPos.position, Quaternion.identity);
+        GameObject bullet = ObjectPool.Instance.GetPooledObject();
+        if (bullet != null){
+            bullet.transform.position = bulletPos.position;
+            bullet.SetActive(true);
+        }
+        else{
+            bullet.SetActive(false);
+        }
     }
 
     

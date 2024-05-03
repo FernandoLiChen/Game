@@ -5,17 +5,19 @@ TagManager:
   serializedVersion: 2
   tags:
   - Enemy
+  - SolidObject
+  - BOSS
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - tttt
   - Water
   - UI
   - 
   - SolidObjects
   - Health
-  - 
+  - Text
   - 
   - 
   - 

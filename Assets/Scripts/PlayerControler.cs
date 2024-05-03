@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class PlayerControler : MonoBehaviour
 {
-    private float speed = 3f;
-    private bool isFacingRight = true;
+    private float speed = 4f;
+    
 
     public Rigidbody2D rb;
     [SerializeField] private Transform wallCheck;
@@ -20,25 +20,16 @@ public class PlayerControler : MonoBehaviour
         movement.y = Input.GetAxisRaw("Vertical");
 
         animator.SetFloat("Horizontal", movement.x);
+        animator.SetFloat("Vertical", movement.y);
 
         animator.SetFloat("Speed", movement.sqrMagnitude);
 
-        Flip();
+       
     }
 
     void FixedUpdate(){
         rb.MovePosition(rb.position + movement * speed * Time.fixedDeltaTime);
         
     }
-
-    private void Flip(){
-        if (isFacingRight && movement.x < 0f || !isFacingRight && movement.x >0f){
-            isFacingRight = !isFacingRight;
-            Vector3 localScale = transform.localScale;
-            localScale.x *= -1f;
-            transform.localScale = localScale;
-        }
-    }
-
 
 }

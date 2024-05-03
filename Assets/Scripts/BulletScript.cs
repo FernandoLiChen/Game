@@ -1,3 +1,4 @@
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -33,6 +34,14 @@ public class BulletScript : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other){
         if (other.gameObject.CompareTag("Enemy")){
             other.gameObject.GetComponent<EnemyHealth>().ehealth -= 20;
+            Destroy(gameObject);
+        }
+        if (other.gameObject.CompareTag("BOSS")){
+            other.gameObject.GetComponent<EnemyHealth>().ehealth -= 20;
+            Destroy(gameObject);
+        }
+        if (other.gameObject.CompareTag("SolidObject"))
+        {
             Destroy(gameObject);
         }
     }
