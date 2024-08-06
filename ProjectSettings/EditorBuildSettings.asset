@@ -20,5 +20,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/DungeonRooms/DungeonEnd.unity
     guid: b9630eecf90bf5a41a2d2a1b3bc37dfb
+  - enabled: 1
+    path: Assets/Scenes/DungeonRooms/DungeonBasic1.unity
+    guid: 42677b119c7621347863157665370213
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0

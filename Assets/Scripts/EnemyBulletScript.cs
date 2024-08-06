@@ -24,13 +24,16 @@ public class EnemyBulletScript : MonoBehaviour
     {
         timer += Time.deltaTime;
 
-        if(timer>10){
+        if (timer > 10)
+        {
             Destroy(gameObject);
         }
     }
 
-    void OnTriggerEnter2D(Collider2D other){
-        if (other.gameObject.CompareTag("Player")){
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
             other.gameObject.GetComponent<playerHealth>().health -= 20;
             Destroy(gameObject);
         }

@@ -8,7 +8,7 @@ public class EnemyAI : MonoBehaviour
     public float stoppingDistance = 4f;
     private Transform player;
 
-    
+
 
     void Start()
     {
@@ -17,11 +17,11 @@ public class EnemyAI : MonoBehaviour
 
     void Update()
     {
-        if(Vector2.Distance(transform.position, player.position) > stoppingDistance)
+        if (Vector2.Distance(transform.position, player.position) > stoppingDistance)
         {
             transform.position = Vector2.MoveTowards(transform.position, player.position, speed * Time.deltaTime);
         }
     }
 
-    
+
 }
